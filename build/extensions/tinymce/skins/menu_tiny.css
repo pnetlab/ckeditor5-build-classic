@@ -1,0 +1,13 @@
+.menu {
+	text-decoration: line-through;
+}
+.lv1 {
+	color:red;
+}
+.lv2 {
+	color:green;
+}
+.collapse_mark{
+	text-decoration: line-through;
+	color:rgb(255, 152, 0);
+}

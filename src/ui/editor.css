@@ -1,0 +1,108 @@
+.cell_selected {
+	border: solid 2px #ffd967 !important;
+}
+
+
+.magic_widget.editing{
+	padding:2px;
+}
+
+.magic_widget.editing.resize{
+    overflow: hidden;
+    position: relative;
+	
+}
+
+.magic_widget.editing.selected > .magicwidget_eagle{
+	border-color: #FF9800 !important;
+}
+
+.magic_widget.editing.dragover > .magicwidget_eagle{
+	border-color: green !important;
+}
+
+.magic_widget.editing .magicwidget_resize {
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+	z-index: 1;
+}
+
+.magicwidget_eagle{
+    position: absolute;
+	cursor: pointer;
+	border-color: darkgray;
+}
+.magicwidget_eagle.left{
+	top:0;
+	bottom: 0;
+	left: 0;
+	width: 5px;
+	border-left: dashed 1px darkgray;
+}
+.magicwidget_eagle.right{
+	top:0;
+	bottom: 0;
+	right: 0;
+	width: 5px;
+	border-right: dashed 1px darkgray;
+}
+.magicwidget_eagle.top{
+	top:0;
+	left:0;
+	right:0;
+	height: 5px;
+	border-top: dashed 1px darkgray;
+}
+.magicwidget_eagle.bottom{
+	bottom:0;
+	left:0;
+	right:0;
+	height: 5px;
+	border-bottom: dashed 1px darkgray;
+}
+
+.ck.ck-dropdown .ck-button.ck-dropdown__button.ck-button__label__fit .ck-button__label{
+	width: auto;
+}
+
+.fa {
+    display: inline-block;
+	font-family: FontAwesome !important; 
+}
+
+
+/*content*/
+.ck-content table p {
+	margin: 0px !important;
+}
+.ck-content .table table {
+	border:unset !important;
+}
+
+.ck-content .row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+/*.ck-content .ck_frame_img {
+	
+	display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse;
+            flex-flow: column-reverse;
+}
+
+.ck-content .ck_frame_img img { 
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
+}*/
+
+

@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -11,7 +11,7 @@ const path = require( 'path' );
 const webpack = require( 'webpack' );
 const { bundler, styles } = require( '@ckeditor/ckeditor5-dev-utils' );
 const CKEditorWebpackPlugin = require( '@ckeditor/ckeditor5-dev-webpack-plugin' );
-const TerserPlugin = require( 'terser-webpack-plugin' );
+const UglifyJsWebpackPlugin = require( 'uglifyjs-webpack-plugin' );
 
 module.exports = {
 	devtool: 'source-map',
@@ -22,7 +22,6 @@ module.exports = {
 	output: {
 		// The name under which the editor will be exported.
 		library: 'ClassicEditor',
-
 		path: path.resolve( __dirname, 'build' ),
 		filename: 'ckeditor.js',
 		libraryTarget: 'umd',
@@ -31,15 +30,14 @@ module.exports = {
 
 	optimization: {
 		minimizer: [
-			new TerserPlugin( {
+			new UglifyJsWebpackPlugin( {
 				sourceMap: true,
-				terserOptions: {
+				uglifyOptions: {
 					output: {
 						// Preserve CKEditor 5 license comments.
 						comments: /^!/
 					}
-				},
-				extractComments: false
+				}
 			} )
 		]
 	},
@@ -60,6 +58,13 @@ module.exports = {
 	module: {
 		rules: [
 			{
+			    test : /\.js?/,
+			    include: [path.resolve( __dirname, 'src')],
+			    use: [{
+			 	   loader : 'babel-loader'
+			    }]
+			},
+			{
 				test: /\.svg$/,
 				use: [ 'raw-loader' ]
 			},
@@ -69,10 +74,7 @@ module.exports = {
 					{
 						loader: 'style-loader',
 						options: {
-							injectType: 'singletonStyleTag',
-							attributes: {
-								'data-cke': true
-							}
+							injectType: 'singletonStyleTag'
 						}
 					},
 					{
@@ -83,9 +85,37 @@ module.exports = {
 							},
 							minify: true
 						} )
-					}
+					},
 				]
 			}
 		]
 	}
 };
+
+//module.exports2 = {
+//		devtool: 'source-map',
+//		performance: { hints: false },
+//
+//		entry: path.resolve( __dirname, 'src/ui', 'imgmngtview.js' ),
+//
+//		output: {
+//			// The name under which the editor will be exported.
+//			library: 'EditorImgModel',
+//
+//			path: path.resolve( __dirname, 'build' ),
+//			filename: 'imgmngtview.js',
+//			libraryTarget: 'umd',
+//			libraryExport: 'default'
+//		},
+//
+//		module: {
+//			rules: [{
+//			       test : /\.js?/,
+//			       use: [{
+//			    	   loader : 'babel-loader'
+//			       }]
+//		}]
+//			
+//		}
+//	};
+

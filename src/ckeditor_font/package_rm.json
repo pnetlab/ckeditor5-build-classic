@@ -1,0 +1,133 @@
+{
+  "_args": [
+    [
+      "@ckeditor/ckeditor5-font",
+      "/var/www/html/ckeditor5-build-classic"
+    ]
+  ],
+  "_from": "@ckeditor/ckeditor5-font@latest",
+  "_hasShrinkwrap": false,
+  "_id": "@ckeditor/ckeditor5-font@11.2.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@ckeditor/ckeditor5-font",
+  "_nodeVersion": "10.13.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/ckeditor5-font_11.2.2_1566812835685_0.6205876498495935"
+  },
+  "_npmUser": {
+    "email": "npm@cksource.com",
+    "name": "ckeditor"
+  },
+  "_npmVersion": "6.4.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "@ckeditor/ckeditor5-font",
+    "raw": "@ckeditor/ckeditor5-font",
+    "rawSpec": "",
+    "scope": "@ckeditor",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@ckeditor/ckeditor5-font/-/ckeditor5-font-11.2.2.tgz",
+  "_shasum": "5bd6e935dda3a906b2bc41f26610285cc52f978e",
+  "_shrinkwrap": null,
+  "_spec": "@ckeditor/ckeditor5-font",
+  "_where": "/var/www/html/ckeditor5-build-classic",
+  "author": {
+    "name": "CKSource",
+    "url": "http://cksource.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/ckeditor/ckeditor5/issues"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-core": "^12.3.0",
+    "@ckeditor/ckeditor5-ui": "^14.0.0",
+    "@ckeditor/ckeditor5-utils": "^14.0.0",
+    "webpack": "^4.42.1"
+  },
+  "description": "Font feature for CKEditor 5.",
+  "devDependencies": {
+    "@ckeditor/ckeditor5-editor-classic": "^12.1.4",
+    "@ckeditor/ckeditor5-engine": "^14.0.0",
+    "@ckeditor/ckeditor5-highlight": "^11.0.5",
+    "@ckeditor/ckeditor5-paragraph": "^11.0.5",
+    "eslint": "^5.5.0",
+    "eslint-config-ckeditor5": "^2.0.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^7.0.0",
+    "@babel/core": "^7.8.7",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "axios": "^0.19.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.17.1",
+    "react": "^16.13.0",
+    "react-color": "^2.18.0",
+    "react-dom": "^16.13.0"
+  },
+  "directories": {},
+  "dist": {
+    "fileCount": 74,
+    "integrity": "sha512-iFnGuHiy8TZ01JfYZUBpYKYPw5yWmnsVgB1UPUsRFhD6oFAzaTS8LqNcLDgbH5hmwyoEeLJ1iDENDtEU4vI7xA==",
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdY6qkCRA9TVsSAnZWagAAtfcP/jpOIb6lmgBjMR+JUZvT\nvMLlvvcTXsM5or5RezJin6k1oBEZExn9zInU5FNsWly1bd7g8IE8X7fxTH8A\nLpjamH/m5rI8FrSfUJo9FE8wBdkvZVy29FlDcpoDN0NjWPeVPRtX8f04xhAt\nNPFVX9CDfJfGjJWsZtF0cagmAL2MnRUqb4jaYuf6Gd6M3m4vmf+4qEKI0KzQ\nFO4imjw/xZwX6E5zBJZ0tIbx4n09UwWfbWf79vNPcKt1DFHk/+SgSUab1WN1\nrU21N/XIkr0wwNZu5+5OxEQ+A/2qxmcaEhVzf/lysawOFnBXJ/NifQ6ZaVVg\n5SJLfqY+tBJNwVud5SvQRdJAHc92TyHpXP8JmJyTMM49xUd2mYCwqwBwemB/\nuro3cR7IZ0Lrlshl6zw7XEGPrcIeFHa0UdonP4PLnNV0JMXyivnkzRz1HBLa\nRHApcBDBr4UN3RzRmw+w4jEQxu7Yw9pZFSN/ZCqD0BPNDXps8Mn14XPiLDQ7\nDTglQwwzQxFjXuEFZiDsJ7F4CR4BYcCtNKY8jP7nmEDmbaCj9hukS+b9dGQH\nq+qNP4mxTGJkPmJDt/4kq7d1LTXV6UOY12ltjXfOZlmKT84JEhhvj7cftO6A\ncg+8lypRuqS6tRn4wxkYS9c+YvyJNlzFJ8iwBHq4tui8MWmdskjMwrLhbCi0\nPrRH\r\n=upRR\r\n-----END PGP SIGNATURE-----\r\n",
+    "shasum": "5bd6e935dda3a906b2bc41f26610285cc52f978e",
+    "tarball": "https://registry.npmjs.org/@ckeditor/ckeditor5-font/-/ckeditor5-font-11.2.2.tgz",
+    "unpackedSize": 236604
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.7.1"
+  },
+  "eslintIgnore": [
+    "packages/**",
+    "src/lib/**"
+  ],
+  "gitHead": "52cbbd1fae172a8efc931083754018c7c2a1952e",
+  "homepage": "https://ckeditor.com/ckeditor-5",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [
+    "ckeditor",
+    "ckeditor 5",
+    "ckeditor5",
+    "ckeditor5-feature",
+    "ckeditor5-plugin"
+  ],
+  "license": "GPL-2.0-or-later",
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --quiet"
+    ]
+  },
+  "maintainers": [
+    {
+      "name": "ckeditor",
+      "email": "npm@cksource.com"
+    }
+  ],
+  "name": "@ckeditor/ckeditor5-font",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckeditor/ckeditor5-font.git"
+  },
+  "scripts": {
+    "lint": "eslint --quiet '**/*.js'",
+    "watch": "webpack --watch --mode development"
+  },
+  "version": "11.2.2"
+}

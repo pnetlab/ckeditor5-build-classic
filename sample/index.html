@@ -4,37 +4,65 @@
 	<meta charset="utf-8">
 	<title>CKEditor 5 – classic editor build – development sample</title>
 	<style>
-		body {
-			max-width: 800px;
-			margin: 20px auto;
-		}
+		
 	</style>
+	
+		<link rel = "stylesheet" href = "/extensions/icons/css/font-awesome.min.css" media = "all" type = "text/css" />
+        
+        <script src = "/extensions/jquery/jquery-3.3.1.min.js"></script>
+        <script src = "/extensions/jquery/jquery-ui.min.js"></script>
+        
+        <link href = "/extensions/bootstrap/css/bootstrap.min.css" rel = "stylesheet" media = "all" type = "text/css" />
+        <script src = "/extensions/bootstrap/js/popper.min.js"></script>
+        <script src = "/extensions/bootstrap/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="/extensions/hover/hover.css">
+        
+        <link rel="stylesheet" href="/extensions/animate/animate.min.css">
+        <script src="/extensions/animate/wow.js"></script>
+        
+        <script src="/extensions/swal2/swal2.all.min.js"></script>
+        
+        <link href = "/extensions/datetimepicker/css/bootstrap-datetimepicker.min.css" rel = "stylesheet"/>
+        <script src="/extensions/datetimepicker/js/moment.js"></script>
+        <script src="/extensions/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+        
+        <link href = "/extensions/table/resizable/resizable.css" rel = "stylesheet" />
+        <script src="/extensions/table/resizable/resizable.js"></script>
+        
+        <link href = "/extensions/ckeditor/ckeditor.css" rel = "stylesheet" />
+        
+        
+	
 </head>
 <body>
 
 <h1>CKEditor 5 – classic editor build – development sample</h1>
 
-<div id="editor">
-	<h2>Sample</h2>
+<div id="editor"></div>
+<button style= "margin: 15px; padding: 0px 5px;" class="btn btn-primary" onClick="preview()">Preview</button>
+<button style= "margin: 15px; padding: 0px 5px;" class="btn btn-primary" onClick="BackData()">Back</button>
+<div class="ck-content" id="preview"></div>
+<script src="/@ckeditor/ckeditor5-inspector/build/inspector.js"></script>
+<script src="/ckeditor.js"></script>
 
-	<p>This is an instance of the <a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor">classic editor build</a>.</p>
-
-	<figure class="image">
-		<img src="../tests/manual/sample.jpg" alt="Autumn fields" />
-	</figure>
-
-	<p>You can use this sample to validate whether your <a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html">custom build</a> works fine.</p>
-</div>
-
-<script src="../build/ckeditor.js"></script>
 <script>
 	ClassicEditor.create( document.querySelector( '#editor' ) )
 		.then( editor => {
+			CKEditorInspector.attach( editor );
 			window.editor = editor;
 		} )
-		.catch( error => {
-			console.error( 'There was a problem initializing the editor.', error );
+		.catch( err => {
+			console.error( err.stack );
 		} );
+	
+	function preview(){
+		document.getElementById("preview").innerHTML = editor.getData();
+	}
+	function BackData(){
+		editor.setData('');
+		editor.setData(document.getElementById("preview").innerHTML);
+	}
 </script>
 
 </body>
